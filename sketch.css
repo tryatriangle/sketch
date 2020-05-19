@@ -1,0 +1,20 @@
+#container {
+    border: 1px solid black;
+    display: flex;
+    flex-flow: wrap;
+}
+
+.fillerDivs {
+    background-color: #A09BE7;
+    height: 20px;
+    width: 20px;
+}
+
+.fillerDivsMO {
+    background-color: #FFF2F1 ;
+}
+#tester {
+    background-color: #A09BE7;
+    height: 20px;
+    width: 20px;
+}
