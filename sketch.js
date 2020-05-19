@@ -1,7 +1,9 @@
+//static
 let container_Div = document.querySelector("#container");
+//created in JavaScript
 let fillerDivs = document.getElementById("fillerDivs");
 
-
+//leaving these in the JavaScript as I'll change them to vars later so user can alter grid size
 container_Div.style.width = "320px";
 container_Div.style.height = "320px";
 
@@ -35,7 +37,9 @@ window.onload = function(){
 
 }
 
-//just a test to make sure the above function works on static divs.
+
+
+//just a test to make sure the above function works on static divs. (it does :|)
 
 let tester = document.getElementById("tester");
 
