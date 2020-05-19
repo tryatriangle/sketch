@@ -1,7 +1,5 @@
 //static
 let container_Div = document.querySelector("#container");
-//created in JavaScript
-let fillerDivs = document.getElementById("fillerDivs");
 
 //leaving these in the JavaScript as I'll change them to vars later so user can alter grid size
 container_Div.style.width = "320px";
@@ -12,18 +10,21 @@ container_Div.style.height = "320px";
 
         for (let i = 0; i < 256; i++){
 
-            var fillerDivs = document.createElement("div");
-            fillerDivs.id = "fillerDivs";
+            let colourDivs = document.createElement("div");
 
-            fillerDivs.classList.add("fillerDivs");
+            colourDivs.id = "fillerDivs";
 
-        container_Div.appendChild(fillerDivs);
+            colourDivs.classList.add("fillerDivs");
+
+        container_Div.appendChild(colourDivs);
     }
 };
 
 loadDivs();
 
-window.onload = function(){
+window.onload = function makeSketch (){
+
+    let fillerDivs = document.getElementById("fillerDivs");
 
     fillerDivs.addEventListener("mouseover", function( event ) {
 
@@ -36,21 +37,3 @@ window.onload = function(){
     }, false);
 
 }
-
-
-
-//just a test to make sure the above function works on static divs. (it does :|)
-
-let tester = document.getElementById("tester");
-
-  tester.addEventListener("mouseover", function( event ) {   
-
-    event.target.style.background = "orange";
-  
-
-    setTimeout(function() {
-      event.target.style.background = "";
-    }, 2000);
-  }, false);
-
-  
