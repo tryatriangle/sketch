@@ -24,16 +24,19 @@ loadDivs();
 
 window.onload = function makeSketch (){
 
-    let fillerDivs = document.getElementById("fillerDivs");
+    this.document.querySelectorAll(".fillerDivs").forEach(item => {
 
-    fillerDivs.addEventListener("mouseover", function( event ) {
 
-        event.target.style.background = "orange";
+        item.addEventListener("mouseover", function( event ) {
+    
+            event.target.style.background = "orange";
+    
+            setTimeout( function() {
+                event.target.style.background = "";
+            }, 2000);
+    
+        }, false);
 
-        setTimeout( function() {
-            event.target.style.background = "";
-        }, 2000);
-
-    }, false);
+    })
 
 }
